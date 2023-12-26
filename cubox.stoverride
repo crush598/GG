@@ -1,20 +1,20 @@
 
 
 
-name: WPS Office
-desc: 解锁超级会员部分功能
+name: Cubox
+desc: 解锁会员部分功能
 
 http:
   mitm:
     - "cubox.pro"
   script:
     - match: ^https:\/\/cubox\.pro\/c\/api\/userInfo
-      name: wps
+      name: cubox
       type: response
       require-body: true
       timeout: 10
       
 script-providers:
-  wps:
+  cubox:
     url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/cubox.js
     interval: 86400
