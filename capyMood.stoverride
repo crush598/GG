@@ -1,0 +1,20 @@
+
+
+
+name: capyMood
+desc: 解锁会员部分功能
+
+http:
+  mitm:
+    - "buy.itunes.apple.com"
+  script:
+    - match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+      name: capyMood
+      type: response
+      require-body: true
+      timeout: 10
+      
+script-providers:
+  capyMood:
+    url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/CapyMood.js
+    interval: 86400
