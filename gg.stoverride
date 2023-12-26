@@ -1,0 +1,20 @@
+
+
+
+name: WPS Office
+desc: 解锁超级会员部分功能
+
+http:
+  mitm:
+    - "api.revenuecat.com"
+  script:
+    - match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
+      name: wps
+      type: response
+      require-body: true
+      timeout: 10
+      
+script-providers:
+  wps:
+    url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Snipd.js
+    interval: 86400
