@@ -6,9 +6,9 @@ desc: 解锁超级会员部分功能
 
 http:
   mitm:
-    - "api.revenuecat.com"
+    - "cubox.pro"
   script:
-    - match: https://api.revenuecat.com/v1/(receipts|subscribers)/*
+    - match: ^https:\/\/cubox\.pro\/c\/api\/userInfo
       name: wps
       type: response
       require-body: true
@@ -16,5 +16,5 @@ http:
       
 script-providers:
   wps:
-    url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/Snipd.js
+    url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/cubox.js
     interval: 86400
