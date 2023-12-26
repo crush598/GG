@@ -17,12 +17,14 @@ http:
       require-body: true
       timeout: 10
     - match: ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
-      name: YY
+      name: YY2
       type: request
-      require-body: true
       timeout: 10
       
 script-providers:
   YY:
+    url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/yiyue.js
+    interval: 86400
+  YY2:
     url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/yiyue.js
     interval: 86400
