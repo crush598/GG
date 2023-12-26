@@ -1,0 +1,28 @@
+/*************************************
+
+项目名称：已阅-书籍/电影/电视剧记录
+
+
+**************************************
+name: YY
+desc: 解锁会员部分功能
+
+http:
+  mitm:
+    - "api.revenuecat.com"
+  script:
+    - match: ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+      name: YY
+      type: response
+      require-body: true
+      timeout: 10
+    - match: ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+      name: YY
+      type: request
+      require-body: true
+      timeout: 10
+      
+script-providers:
+  YY:
+    url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/yiyue.js
+    interval: 86400
