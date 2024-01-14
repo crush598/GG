@@ -9,8 +9,8 @@ http:
     script:
       - match: ^https?:\/\/((app|api)\.(\w{2,15})?\.(com|cn)).*player.*\.(v3|v2|v1).Play(URL|View|er).*$ 
         name: B
-        type: response
-        require-body: true
+        type: request
+        request: true
         binary-mode: true
         timeout: 10
       
