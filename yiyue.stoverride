@@ -16,7 +16,7 @@ http:
     - match: ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
       name: YY2
       type: request
-      require-body: true
+      request: true
       timeout: 10
       
 script-providers:
