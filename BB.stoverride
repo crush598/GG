@@ -6,6 +6,7 @@ desc: 解锁会员部分功能
 http:
     mitm:
       - “app.bilibili.com”
+      - “grpc.biliapi.net”
     script:
       - match: ^https?:\/\/((app|api)\.(\w{2,15})?\.(com|cn)).*player.*\.(v3|v2|v1).Play(URL|View|er).*$ 
         name: B
