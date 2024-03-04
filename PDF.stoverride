@@ -1,0 +1,17 @@
+name: pdf点睛
+desc: 解锁会员部分功能
+
+http:
+  mitm:
+    - "%APPEND% license.pdfexpert.com"
+  script:
+    - match: ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh
+      name: pdf点睛
+      type: request
+      require-body: true
+      timeout: 10
+      
+script-providers:
+  pdf点睛:
+    url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/PDFexpert.js
+    interval: 86400
