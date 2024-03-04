@@ -3,9 +3,9 @@ desc: 解锁会员部分功能
 
 http:
   mitm:
-    - "%APPEND% license.pdfexpert.com"
+    - license.pdfexpert.com"
   script:
-    - match: ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh
+    - match: ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh 
       name: pdf点睛
       type: request
       require-body: true
